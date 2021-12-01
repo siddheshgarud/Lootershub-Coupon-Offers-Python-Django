@@ -1,0 +1,340 @@
+{% extends 'Home/basic.html' %}
+{%block title%}{{stores.title}}{%endblock%}
+{% block body %}
+
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area " style="background-color: #EAF2F8">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="breadcrumb-title">Shop</h2>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Shop</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- breadcrumb-area end -->
+   {%if messages%}
+   {% for i in messages%}
+       <div class="{{i.tags}}" style="margin: auto;">
+         
+          <strong></strong>
+            Hello {{request.user}} {{i}} - 
+       </div>
+   {%endfor%}
+{%endif%}
+
+
+
+                       
+                   
+    <!-- Shop Page Start  -->
+    <div class="shop-category-area pt-100px pb-100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <!-- Shop Top Area Start -->
+                    <div class="shop-top-bar d-flex">
+                        <!-- Left Side start -->
+                        <p><span></span> All Coupons is Below <span></span></p>
+                        <!-- Left Side End -->
+                        
+                         <div class="login-register-tab-list nav">
+                            <a class="active" data-bs-toggle="tab" href="#lg1">
+                                <h4>Coupons</h4>
+                            </a>
+                            <a data-bs-toggle="tab" href="#lg2">
+                                <h4>/Offers</h4>
+                            </a>
+                        </div>
+                        <!-- Right Side Start -->
+                        <div class="select-shoing-wrap d-flex align-items-center">
+                            <div class="shot-product">
+                                <p>Sort By:</p>
+                            </div>
+                            <div class="shop-select">
+                                <select class="shop-sort">
+                                    <option data-display="Relevance">Relevance</option>
+                                    <option value="1"> Name, A to Z</option>
+                                    <option value="2"> Name, Z to A</option>
+                                    <option value="3"> Price, low to high</option>
+                                    <option value="4"> Price, high to low</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <!-- Right Side End -->
+                    </div>
+                    <!-- Shop Top Area End -->
+
+                    <!-- Shop Bottom Area Start -->
+                    <div class="shop-bottom-area">
+
+                        <!-- Tab Content Area Start -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="tab-content">
+                                    
+                                        <div class="row mb-n-30px">
+                                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up"
+                                                data-aos-delay="200">
+                                                
+                                            </div>
+                                        </div>
+                             
+                                   
+                                   
+                                   
+                                   
+                                   
+               
+                        
+                           <div id="lg2" class="tab-pane active">
+                                <div class="login-form-container">
+                                       
+                                            {%for i in allcoupons%}
+
+                                            
+                                     <a href="www.google.com"><div style="background-color:  #EAF2F8;" class="gc-box banko" data-merchant="MakeMyTrip" data-country="" data-tags="Domestic Flights" id="cpn_112359" data-type="cp" data-cid="112359" data-eid="1" data-cpnpstn="0"> 
+                                                    <div class="gcbr go-cpn-show go-cpy" data-ctype="cc_c" data-goid="112359" data-retype="c" data-type="cp" data-cpnpstn="0">  
+                                                        <div class="bank"> 
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 80%"></span>
+                                                                </span>
+                                                                <span class="rating-num">{{i.ccrdatetime}}</span>
+                                                            </span>
+                                                            <h5 class="title"><a href="single-product.html">{{i.cname}}</a>
+                                                                <span> - {{i.cpercentage}} <small class="ri">% OFF</small> </span></h5>
+                                                        </div> 
+                                                        <p>{{i.cdetails}}</p> 
+                                                        <div class="gcbr-r"> 
+                                                            <p class="gcbr-p"> 
+                                                                
+                                                                <i class="dot"></i> 
+                                                                <span style="visibility: visible; !important" class="usr"><i></i>
+                                                                    <span class="bold-me">78</span> uses today</span>
+                                                            </p> 
+                                                            <span href="javascript:void(0);" class="cbtn"> 
+                                                                <span class="hidden-lg"></span> 
+                                                                <span onclick="couponvisible()" id="{{i.code}}" class="visible-lg">{{i.ccode}}</span> 
+                                                                 
+                                                            </span> 
+                                                            <script>
+                                                            function couponvisible(){
+                                                                var copyText = document.getElementById("{{i.code}}");
+                                                                copyText.select();
+                                                                copyText.setSelectionRange(0, 99999); 
+                                                                navigator.clipboard.writeText(copyText.value);
+                                                            }
+                                                           
+                                                            
+                                                            
+                                                            </script>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="border-small"></div> 
+                                    </a>
+                                                </div> 
+                                         
+                                               
+                                                </div>
+                                                    </div>
+                                                        
+                                                             </div>
+                                                {% endfor %}
+     
+                                </div>
+                            </div>
+                            <div class="tab-pane fade">
+                                <div id="lg2" class="tab-pane ">
+                                    <div class="login-form-container">
+                                                                   
+                                </div>
+                            </div>
+                        </div>                      
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   
+                        {% comment %} <div class="tab-pane fade show active" id="shop-list">                       <div class="shop-list-wrapper" style="box-shadow: rgba(0, 0, 0, 0.70) 0px 1px 4px;
+                                        background-color: #eaf2f8;
+                                        padding: 25px;">
+                                            <div class="row">
+                                                <div class="col-md-5 col-lg-5 col-xl-4">
+                                                    <div class="product">
+                                                        <div class="thumb">
+                                                            <a href="single-product.html" class="image">
+                                                                <img src="assets/images/product-image/2.jpg"
+                                                                    alt="Product" />
+                                                                <img class="hover-image"
+                                                                    src="assets/images/product-image/2.jpg"
+                                                                    alt="Product" />
+                                                            </a>
+                                                            <span class="badges">
+                                                                <span class="sale">-10%</span>
+                                                                <span class="new">New</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-lg-7 col-xl-8">
+                                                    <div class="content-desc-wrap">
+                                                        <div class="content" style="background-color: #eaf2f8;">
+                                                            <span class="ratings">
+                                                                <span class="rating-wrap">
+                                                                    <span class="star" style="width: 80%"></span>
+                                                                </span>
+                                                                <span class="rating-num">( 4 Review)</span>
+                                                            </span>
+                                                            <h5 class="title"><a href="single-product.html">{{i.cname}}</a>
+                                                            </h5>
+                                                            <p>More room to move.With 80GB or 160GB of storage and up to
+                                                                40 hours of battery life, the new iPod classic lets you
+                                                                enjoy up to 40,000 songs or..</p>
+                                                        </div>
+                                                        <div class="box-inner">
+                                                            <span class="price">
+                                                                <span class="new">$38.50</span>
+                                                                <span class="old">$48.50</span>
+                                                            </span>
+                                                            <div class="actions">
+                                                                <a href="wishlist.html" class="action wishlist"
+                                                                    title="Wishlist"><i class="pe-7s-like"></i></a>
+                                                                <a href="#" class="action quickview"
+                                                                    data-link-action="quickview" title="Quick view"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal"><i
+                                                                        class="pe-7s-search"></i></a>
+                                                                <a href="compare.html" class="action compare"
+                                                                    title="Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                            </div>
+                                                            <button title="Add To Cart" class=" add-to-cart">Add
+                                                                To Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                          </div> {% endcomment %}
+          
+                  
+
+                
+                        <!-- Tab Content Area End -->
+
+                        <!--  Pagination Area Start -->
+                        <div class="load-more-items text-center mb-md-60px mb-lm-60px mt-30px0px" data-aos="fade-up">
+                            <a href="#" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i
+                                    class="fa fa-refresh ml-15px" aria-hidden="true"></i></a>
+                        </div>
+                        <!--  Pagination Area End -->
+                    </div>
+                    <!-- Shop Bottom Area End -->
+                </div>
+                <!-- Sidebar Area Start --
+                <div class="col-lg-3 col-md-12 mb-md-60px mb-lm-60px">
+                    <div class="shop-sidebar-wrap">
+                        <!-- Sidebar single item --
+                        <div class="sidebar-widget-search">
+                            <form id="widgets-searchbox" action="#">
+                                <input class="input-field" type="text" placeholder="Search">
+                                <button class="widgets-searchbox-btn" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Sidebar single item --
+                        <div class="sidebar-widget mt-8">
+                            <h4 class="sidebar-title">Price Filter</h4>
+                            <div class="price-filter">
+                                <div class="price-slider-amount">
+                                    <input type="text" id="amount" class="p-0 h-auto lh-1" name="price"
+                                        placeholder="Add Your Price" />
+                                </div>
+                                <div id="slider-range"></div>
+                            </div>
+                        </div>
+                        <!-- Sidebar single item --
+                        <div class="sidebar-widget">
+                            <h4 class="sidebar-title">Category</h4>
+                            <div class="sidebar-widget-category">
+                                <ul>
+                                    <li><a href="#" class="selected m-0">Accesasories <span>(6)</span> </a></li>
+                                    <li><a href="#" class="">Computer <span>(4)</span> </a></li>
+                                    <li><a href="#" class="">Covid-19 <span>(2)</span> </a></li>
+                                    <li><a href="#" class="">Electronics <span>(6)</span> </a></li>
+                                    <li><a href="#" class="">Frame Sunglasses <span>(12)</span> </a></li>
+                                    <li><a href="#" class="">Furniture <span>(7)</span> </a></li>
+                                    <li><a href="#" class="">Genuine Leather <span>(9)</span> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Sidebar single item -->
+                
+                     
+                        <!-- Sidebar single item --
+                        <div class="sidebar-widget tag">
+                            <h4 class="sidebar-title">Tags</h4>
+                            <div class="sidebar-widget-tag">
+                                <ul>
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Organic</a></li>
+                                    <li><a href="#">Old Fashion</a></li>
+                                    <li><a href="#">Men</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Dress</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Sidebar single item --
+                        <div class="sidebar-widget-image">
+                            <div class="single-banner">
+                                <img src="assets/images/banner/2.jpg" alt="">
+                                <div class="item-disc">
+                                    <h2 class="title">#bestsellers</h2>
+                                    <a href="single-product-variable.html" class="shop-link">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sidebar single item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Page End  -->
+
+   {%endblock%}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+
+{% extends 'Home/basic.html'%}
+
+
+{% block body %}
+    {% load thumbnail %}
+    {% load static %}
+      <div class="offcanvas-overlay"></div>
+
+   
+
+    <!-- Hero/Intro Slider Start -->
+    <div class="section ">
+        <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+            <!-- Hero slider Active -->
+
+
+            <div class="swiper-wrapper">
+         
+            {%for i in banners%}     
+                <!-- Single slider item -->
+                <div class="hero-slide-item slider-height swiper-slide d-flex bg-color1">
+                    <div class="container align-self-center">
+                        <div class="row">
+                            
+                                <div class="hero-slide-content slider-animated-1">
+                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                             <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="/media/{{i.bimage}}" alt="First slide">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                
+                           
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+                {%endfor%}
+                <!-- Single slider item -->
+                
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero/Intro Slider End -->
+    <div class="space" style="padding:20px;"></div>
+   
+{%if messages%}
+   {% for i in messages%}
+       <div class="{{i.tags}}" style="margin: auto;">
+         
+          <strong></strong>
+            Hello {{request.user}} {{i}} - 
+       </div>
+   {%endfor%}
+{%endif%}
+
+</br>
+<div class="container">
+<div class="col-lg col-md col-12">
+                    <div class="section-title mb-0">
+                        <a href="/stores"><h2 class="title"><a href="/stores">Popular Stores</a></h2>
+                    </div>
+                </div>
+  <hr class="mt-2 mb-5">  
+ </div>
+
+<div class="imagegridstore">
+   
+  
+             
+                
+                
+
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0"></h1>
+
+  
+
+  <div  class="row text-center text-lg-start">
+    
+    
+  {%for i in simagegrid|slice:"9"%}
+
+    <div style="width: 30%;" class="col-lg-3 col-md-4 col-6">
+      <a  href="{{i.get_absolute_url}}" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="/media/{{i.simage}}" alt="">
+      </a>
+    </div>
+   {%endfor%}
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+  </br>
+  
+  
+  
+  
+  <div class="container">
+  <hr class="mt-2 mb-5">
+  </div>
+  
+  
+  <div class="newsletter-subscribe mt-5 container" style="background-color: #EAF2F8;">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center newsletter">Subscribe to our Newsletter</h2>
+            <p class="text-center">To Get Daily Offers & Coupons of Your Favourite Online Store. Subscribe To Us! </p>
+        </div>
+        <form class="form-inline" method="POST">
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+            </br>
+            <div class="form-group"><button class="btn btn-primary" type="button">Subscribe </button></div>
+        </form>
+    </div>
+</div>
+</br>
+</br>
+  
+  
+  <!-- Product Area Start -->
+    <div class="product-area">
+        <div class="container">
+            <!-- Section Title & Tab Start -->
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg col-md col-12">
+                    <div class="section-title mb-0">
+                        <a href="/stores"><h2 class="title"><a href="/stores">Stores</a></h2>
+                    </div>
+                </div>
+                <hr class="mt-2 mb-5">
+                <!-- Section Title End -->
+
+                <!-- Tab Start -->
+                <div class="col-lg-auto col-md-auto col-12">
+                    <ul class="product-tab-nav nav">
+                        <li class="nav-item"><a class="nav-link "
+                                href="/">All</a></li>
+                        {% for i in randunicategory%}
+                            <li class="nav-item"><a class="nav-link"  href="{% url 'Home:categories' i.scategory %}" class="selected">  {{i.scategory}} <span>({{i.posts_count}})</span> </a></li>
+                        {%endfor%}
+                        
+                      
+                </div>
+                <!-- Tab End -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Area Srart -->
+    <div class="feature-area pb-100px">
+        <div class="container">
+            <div class="row">
+                
+                <!-- single item -->
+         {%for i in stores|slice:"8" %}
+                <div class="col-lg-4 col-md-6 mb-md-30px mb-lm-30px mt-lm-30px" style="margin-top: 12px; margin-bottom:12px;">
+                   <a class="new-link" href="{{i.get_absolute_url}}"><div class="single-feature">
+                        <div class="feature-icon">
+                            <img src="/media/{{i.simage}}" alt="" height="100px" width="100px">
+                        </div>
+                        <div class="feature-content">
+                            <h4 class="title">{{i.stores_name}}</h4>
+                          
+                        
+                       
+                        <div class="blog-athor-date" style="margin: 0px -5px; text">
+                        
+                       
+                        <a class="blog-date height-shape" href="#"><i class="fa fa-database"
+                                                aria-hidden="true"></i>{{i.ccount}} Coupons </a>
+                                        <a class="blog-mosion" href="#">
+                                         <i class="fa fa-check-circle"
+                                        aria-hidden="true"></i>{{i.ocount}} Offers</a>
+                                     
+                                        
+                     <a class="blog-mosion" href="{{i.get_absolute_url_category}}"><i class="fa fa-check-circle"
+                                        aria-hidden="true"></i> {{i.scategory}}</a>
+                                        
+                     
+                                    </div>
+                     
+                                
+                          
+                        </div></a>
+                        
+                    </div>
+                </div>
+             
+           
+          {%endfor%}    
+                <!-- single item -->
+                
+                    <!-- single item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Area End -->
+
+    
+            
+      
+            
+      
+      
+                          
+
+                                    <!-- Single Prodect -->
+   
+           <!-- Single Prodect -->
+         
+                                    <!-- Single Prodect -->
+                
+                                    <!-- Single Prodect -->
+              
+                                    <!-- Single Prodect -->
+            
+                                    <!-- Single Prodect -->
+             
+                                    <!-- Single Prodect -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1st tab end -->
+                        <!-- 2nd tab start -->
+                       
+                               
+                               
+                               
+                                
+                        <!-- 2nd tab end -->
+                        <!-- 3rd tab start -->
+                        
+                       
+<div class="container">
+<div class="col-lg col-md col-12">
+                    <div class="section-title mb-0">
+                        <a href="/stores"><h2 class="title"><a href="/stores">Deal Of The Day</a></h2>
+                    </div>
+                </div>
+ </div>
+ <hr class="mt-2 mb-5">
+    <!-- Deal Area Start -->
+   {%for i in Dealotd%}
+    <div  class="deal-area pb-100px pt-100px">
+        <div class="container ">
+            <div  class="row">
+                <div class="col-12">
+                    <div style="background-color: #EAF2F8;" class="deal-inner deal-bg position-relative pt-100px pb-100px"
+                        data-bg-image="assets/images/deal-img/deal-bg.jpg">
+                        <div class="deal-wrapper">
+                            <span class="category">#{{i.dealtag}}</span>
+                            <h3 class="title">{{i.dealname}}</h3>
+                            <div class="deal-timing">
+                                <div data-countdown="{{i.dealtime.year}}/{{i.dealtime.month}}/{{i.dealtime.day}}"></div>
+                            </div>
+                            <a href="{{i.dealurl}}" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
+                                Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="deal-image">
+                            <img class="img-fluid" src="/media/{{i.dealimage}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   {%endfor%}
+    <!-- Deal Area End -->
+    
+    
+    
+    
+    
+    
+
+    <!-- Testimonial Area Start -->
+    <div class="testimonial-area pb-40px">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center mb-0">
+                        <h2 class="title line-height-1">Stores</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider Start -->
+            <div class="testimonial-wrapper swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slider Single Item -->
+                    
+                    <!-- Slider Single Item -->
+                    <!-- Slider Single Item -->
+                   
+                   
+                   {% for i in stores|slice:'5' %}
+                    <div class="swiper-slide">
+                        <div class="testi-inner">
+
+                            
+                           
+                                <div class="card p-3">
+                                    <a href="{{i.get_absolute_url}}"><div class="d-flex flex-row mb-3"><img src="/media/{{i.simage}}" width="70"></a>
+                                        <div class="d-flex flex-column ml-2"><span>{{i.stores_name}}</span><span class="text-black-50">{{i.scategory}}</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                                    </div>
+                                    <h6>{{i.sdesc}}</h6>
+                                    <div class="d-flex justify-content-between install mt-3"><span>Coupons: {{i.ccount}} </span>| <span> Offers: {{i.ocount}}</span> <a href="{{i.get_absolute_url}}" > <span class="text-primary">View&nbsp;<i class="fa fa-angle-right"></i></span><a/></div>
+                                </div>
+                           
+                            
+                       
+                    
+                        </div>
+                    </div>
+                    {%endfor%}
+                    <!-- Slider Single Item -->
+                    
+                    <!-- Slider Single Item -->
+                    
+                    <!-- Slider Single Item -->
+                    
+                    <!-- Slider Single Item -->
+                </div>
+            </div>
+            <!-- Slider Start -->
+        </div>
+    </div>
+    <!-- Testimonial Area End -->
+
+    <!-- Brand area start -->
+    <div class="brand-area pb-100px">
+        <div class="container">
+            <div class="brand-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/1.png" alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/2.png" alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/3.png" alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/4.png" alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="assets/images/brand-logo/5.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand area end -->
+    {% endblock %}

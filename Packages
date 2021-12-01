@@ -1,0 +1,4 @@
+#sorl-thumbnail
+#django-hitcount
+#pip install django-resized
+#pip install Pillow
