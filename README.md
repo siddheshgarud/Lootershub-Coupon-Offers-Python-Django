@@ -8,35 +8,49 @@ Note :- Some Functionalities are still not working.
 
 
 #Some Screenshots
-
+<pre>
 Home Page
+<pre>
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot1.png?raw=true)
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot2.png?raw=true)
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot3.png?raw=true)
-
-
+<pre>
+<pre>
+<pre>
 Stores Page
+<pre>
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot4.png?raw=true)
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot5.png?raw=true)
-
-
+<pre>
+<pre>
+<pre>
 Coupon Page
+<pre>
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot6.png?raw=true)
-
+<pre>
+<pre>
+<pre>
 
 Login Page
+<pre>
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot7.png?raw=true)
-
+<pre>
+<pre>
+<pre>
 
 Account Page
+<pre>
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot8.png?raw=true)
 
 
 
 
+<pre>
+<pre>
+<pre>
 
 
 
