@@ -10,6 +10,7 @@ Note :- Some Functionalities are still not working.
 #Some Screenshots
 <br /><br /><br />
 Home Page
+<br />
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot1.png?raw=true)
 
@@ -17,31 +18,36 @@ Home Page
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot3.png?raw=true)
 
-
+<br /><br /><br /><br />
 Stores Page
+<br />
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot4.png?raw=true)
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot5.png?raw=true)
 
+<br /><br /><br /><br />
 Coupon Page
+<br />
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot6.png?raw=true)
 
-
+<br /><br /><br /><br />
 Login Page
+<br />
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot7.png?raw=true)
-
+<br /><br /><br /><br />
 
 Account Page
+<br />
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot8.png?raw=true)
 
 
 
 
-
+<br /><br /><br /><br />
 
 
 
