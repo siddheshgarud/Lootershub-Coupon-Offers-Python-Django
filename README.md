@@ -9,8 +9,8 @@ Note :- Some Functionalities are still not working.
 
 #Some Images
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/[siddheshgarud]/[Lootershub-Coupon-Offers-Python-Django]/blob/[master]/image.jpg?raw=true)
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/Screenshot1.png?raw=true)
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
