@@ -1,10 +1,14 @@
 # Lootershub-Coupon-Offers-Python-Django
 
- Lootershub is an Coupon & Offer website | You can get Discount Coupons of all store you saw online. This is Best platform to earn Some cashback and rewards..
+Lootershub is an Coupon & Offer website | You can get Discount Coupons of all store you saw online. This is Best platform to earn Some cashback and rewards..
+ 
+author - <a href="https://github.com/siddheshgarud">Siddhesh garud</a> AND <a href="https://github.com/Shreyas30k">Shreyas Kocharekar</a>
  
 Basically Website is built on Python / Django.
  
 Note :- Some Functionalities are still not working.
+
+
 
 
 #Some Screenshots
