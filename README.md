@@ -73,11 +73,6 @@ will eventually upload more pictures
 
 ![alt text](https://github.com/siddheshgarud/Lootershub-Coupon-Offers-Python-Django/blob/master/screenshots/Screenshot7.png?raw=true)
 
-7. Account Page
-
-<img src="https://raw.githubusercontent.com/siddheshgarud/Social-Distancing-by-Siddheshgarud/master/Screenshots/Screenshot.jpeg"  width="200" height="400" />
-<img src="https://raw.githubusercontent.com/siddheshgarud/Social-Distancing-by-Siddheshgarud/master/Screenshots/Screenshot.jpeg"  width="200" height="400" />
-
 ## Tech Stack
 
 **Client:** Javascript, Bootstrap, TailwindCSS
