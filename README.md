@@ -76,6 +76,7 @@ will eventually upload more pictures
 7. Account Page
 
 <img src="https://raw.githubusercontent.com/siddheshgarud/Social-Distancing-by-Siddheshgarud/master/Screenshots/Screenshot.jpeg"  width="200" height="400" />
+<img src="https://raw.githubusercontent.com/siddheshgarud/Social-Distancing-by-Siddheshgarud/master/Screenshots/Screenshot.jpeg"  width="200" height="400" />
 
 ## Tech Stack
 
